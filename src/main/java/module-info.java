@@ -5,4 +5,5 @@ module com.example.weatherjava {
 
     opens com.example.weatherjava to javafx.fxml;
     exports com.example.weatherjava;
+    requires java.sql;
 }
