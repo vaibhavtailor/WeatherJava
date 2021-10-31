@@ -1,3 +1,19 @@
+-- if the user "student" does not already exist, create it
+CREATE USER 'student'@'localhost' IDENTIFIED BY 'student';
+GRANT ALL PRIVILEGES ON * . * TO 'student'@'localhost';
+
+CREATE DATABASE javaProjects;
+USE javaProjects;
+
+DROP TABLE IF EXISTS weather;
+
+CREATE TABLE weather (
+	Location VARCHAR(30),
+    Temperature INT(2),
+    Wind INT(2),
+    WindDirection VARCHAR(10),
+    Visibility INT(2));
+
 Insert Into weather (Location, Temperature, Wind, WindDirection, Visibility) values ('Windsor', 33, 19, 'South', 20);
 Insert Into weather (Location, Temperature, Wind, WindDirection, Visibility) values ('Ottawa', 19, 9, 'East', 7);
 Insert Into weather (Location, Temperature, Wind, WindDirection, Visibility) values ('Hamilton', 23, 11, 'North', 14);
